@@ -23,7 +23,7 @@ uint64_t nPrime(uint64_t n) {
     int num = 2;
     int k = 0;
     while (1) {
-        if (checkPrime(Num) == 1) {
+        if (checkPrime(num) == 1) {
             k++;
         }
         if (k == n) {
@@ -31,7 +31,7 @@ uint64_t nPrime(uint64_t n) {
         }
         num++;
     }
-    return Num;
+    return num;
 }
 
 uint64_t nextPrime(uint64_t value) {

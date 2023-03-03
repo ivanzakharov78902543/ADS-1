@@ -8,19 +8,16 @@ bool checkPrime(uint64_t value) {
     if (value < 2) {
         return false;
     }
-    if (value == 2) {
-        return true;
-    }
     for (int i = 2; i <= value / 2; i++) {
-        if (k > 0) {
-            return false;
-        }
         if (value % i == 0) {
             k += 1;
         }
     }
     if (k == 0) {
         return true;
+    }
+    else {
+        return false;
     }
 }
 
@@ -29,7 +26,8 @@ uint64_t nPrime(uint64_t n) {
     int l = 1;
     if (n == 1) {
         return 2;
-    } else {
+    }
+    else {
         for (int i = 3; i < 10000; i++) {
             for (int j = 2; j <= i / 2; j++) {
                 if (i % j == 0) {
@@ -38,7 +36,8 @@ uint64_t nPrime(uint64_t n) {
             }
             if (w == 0) {
                 l += 1;
-            } else {
+            }
+            else {
                 w = 0;
             }
             if (l == n) {
@@ -58,9 +57,8 @@ uint64_t nextPrime(uint64_t value) {
         }
         if (s == 0) {
             return i;
-        } else {
-            s = 0;
         }
+        s = 0;
     }
 }
 
